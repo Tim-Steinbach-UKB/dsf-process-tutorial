@@ -1,0 +1,35 @@
+<Task xmlns="http://hl7.org/fhir">
+	<meta>
+		<profile
+			value="http://ukbonn.de/fhir/StructureDefinition/task-exercise-1|0.0.1" />
+	</meta>
+	<instantiatesUri value="http://ukbonn.de/bpe/Process/task-exercise-1/0.0.1" />
+	<status value="requested" />
+	<intent value="order" />
+	<authoredOn value="2024-03-12T15:00:00+02:00" />
+	<requester>
+		<type value="Organization" />
+		<identifier>
+			<system value="http://highmed.org/sid/organization-identifier" />
+			<value value="ukbonn.de" />
+		</identifier>
+	</requester>
+	<restriction>
+		<recipient>
+			<type value="Organization" />
+			<identifier>
+				<system value="http://highmed.org/sid/organization-identifier" />
+				<value value="ukbonn.de" />
+			</identifier>
+		</recipient>
+	</restriction>
+	<input>
+		<type>
+			<coding>
+				<system value="http://highmed.org/fhir/CodeSystem/bpmn-message" />
+				<code value="message-name" />
+			</coding>
+		</type>
+		<valueString value="starTaskExercise-1" />
+	</input>
+</Task>
