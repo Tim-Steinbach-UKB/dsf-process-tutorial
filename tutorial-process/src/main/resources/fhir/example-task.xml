@@ -5,7 +5,7 @@
 	</meta>
 	<identifier>
      <system value="http://dsf.dev/sid/task-identifier" />
-     <value value="http://dsf.dev/bpe/Process/processKey/#{version}/task-start-dic-process-name" />
+     <value value="http://dsf.dev/bpe/Process/processKey/1.0/task-start-dic-process-name" />
 	</identifier>
 	<instantiatesUri value="http://ukbonn.de/bpe/Process/task-exercise-1/1.0" />
 	<status value="requested" />
@@ -14,23 +14,23 @@
 	<requester>
 		<type value="Organization" />
 		<identifier>
-			<system value="http://highmed.org/sid/organization-identifier" />
-			<value value="#{organisation}" />
+			<system value="http://dsf.dev/sid/organization-identifier" />
+			<value value="Test_DIC" />
 		</identifier>
 	</requester>
 	<restriction>
 		<recipient>
 			<type value="Organization" />
 			<identifier>
-				<system value="http://highmed.org/sid/organization-identifier" />
-				<value value="#{organisation}" />
+				<system value="http://dsf.dev/sid/organization-identifier" />
+				<value value="Test_DIC" />
 			</identifier>
 		</recipient>
 	</restriction>
 	<input>
 		<type>
 			<coding>
-				<system value="http://highmed.org/fhir/CodeSystem/bpmn-message" />
+				<system value="http://dsf.dev/fhir/CodeSystem/bpmn-message" />
 				<code value="message-name" />
 			</coding>
 		</type>

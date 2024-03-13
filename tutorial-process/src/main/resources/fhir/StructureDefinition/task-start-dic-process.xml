@@ -34,12 +34,23 @@
       <min value="1" />
     </element>
     <element id="Task.input">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+    <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Parameter" />
-      </extension>
-      <path value="Task.input" />
-      <max value="2" />
-    </element>
+    </extension>
+    <path value="Task.input" />
+    <slicing>
+        <discriminator>
+            <type value="value" />
+            <path value="type.coding.system" />
+        </discriminator>
+        <discriminator>
+            <type value="value" />
+            <path value="type.coding.code" />
+        </discriminator>
+        <rules value="openAtEnd" />
+    </slicing>
+    <min value="1" />
+</element>
     <element id="Task.input:message-name">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Parameter" />
