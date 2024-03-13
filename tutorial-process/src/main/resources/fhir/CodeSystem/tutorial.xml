@@ -1,0 +1,29 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<meta>
+		<tag>
+			<system value="http://dsf.dev/fhir/CodeSystem/read-access-tag" />
+			<code value="ALL" />
+		</tag>
+	</meta>
+	<url value="http://dsf.dev/fhir/CodeSystem/tutorial" />       <!--dummy value-->
+	<!-- version managed by bpe -->
+	<version value="#{version}" />
+	<name value="Tutorial" />      <!--dummy value-->
+	<title value="Tutorial Code-System" />       <!--dummy value-->
+	<!-- status managed by bpe -->
+	<status value="unknown" />
+	<experimental value="false" />
+	<!-- date managed by bpe -->
+	<date value="#{date}" />
+	<publisher value="DSF" />       <!--dummy value-->
+	<description value="CodeSystem with codes for me" />        <!--dummy value-->
+	<caseSensitive value="true" />
+	<hierarchyMeaning value="grouped-by" />
+	<versionNeeded value="false" />
+	<content value="complete" />
+	<concept>
+		<code value="tutorial-input" />        <!--dummy value-->
+		<display value="Tutorial Input" />     <!--dummy value-->
+		<definition value="Input" />      <!--dummy value-->
+	</concept>
+</CodeSystem> 
