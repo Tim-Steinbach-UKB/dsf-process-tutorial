@@ -15,8 +15,8 @@
 		<type value="Organization" />
 		<identifier>
 			<system value="http://highmed.org/sid/organization-identifier" />
-			<!-- <value value="#{organisation}" /> -->
-			<value value="Test_DIC" />
+			<value value="#{organisation}" />
+			<!-- <value value="Test_DIC" /> -->
 		</identifier>
 	</requester>
 	<restriction>
@@ -24,8 +24,8 @@
 			<type value="Organization" />
 			<identifier>
 				<system value="http://highmed.org/sid/organization-identifier" />
-				<!-- <value value="#{organisation}" /> -->
-				<value value="Test_DIC" />
+				<value value="#{organisation}" />
+				<!-- <value value="Test_DIC" /> -->
 			</identifier>
 		</recipient>
 	</restriction>
