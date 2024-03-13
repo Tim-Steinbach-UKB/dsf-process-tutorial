@@ -2,8 +2,7 @@ package dev.dsf.process.tutorial;
 
 import static dev.dsf.process.tutorial.TutorialProcessPluginDefinition.VERSION;
 
-public interface ConstantsTutorial
-{
+public interface ConstantsTutorial {
 	String PROCESS_VERSION = VERSION.substring(4, 7);
 	String RESOURCE_VERSION = VERSION.substring(0, 3);
 	String PROCESS_NAME_DIC = "dicProcess";

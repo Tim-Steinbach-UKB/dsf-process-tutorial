@@ -24,11 +24,9 @@ import dev.dsf.process.tutorial.TestProcessPluginGenerator;
 import dev.dsf.process.tutorial.TutorialProcessPluginDefinition;
 import dev.dsf.process.tutorial.service.DicTask;
 
-public class TutorialProcessPluginDefinitionTest
-{
+public class TutorialProcessPluginDefinitionTest {
 	@Test
-	public void testDicProcessBpmnProcessFile() throws Exception
-	{
+	public void testDicProcessBpmnProcessFile() throws Exception {
 		String filename = "bpe/dic-process.bpmn";
 		String processId = "dsfdev_dicProcess";
 
@@ -47,8 +45,7 @@ public class TutorialProcessPluginDefinitionTest
 	}
 
 	@Test
-	public void testDicProcessResources() throws Exception
-	{
+	public void testDicProcessResources() throws Exception {
 		String draftTaskFile = "fhir/Task/task-start-dic-process.xml";
 
 		ProcessPluginDefinition definition = new TutorialProcessPluginDefinition();
@@ -57,14 +54,12 @@ public class TutorialProcessPluginDefinitionTest
 				.initializeAndValidateResources(ConstantsTutorial.TUTORIAL_DIC_ORGANIZATION_IDENTIFIER);
 		assertEquals(true, initialized);
 
-		List<Resource> dicProcessResources = processPlugin.getFhirResources().get(new ProcessIdAndVersion(
-				ConstantsTutorial.PROCESS_NAME_FULL_DIC, definition.getResourceVersion()));
-
+		List<Resource> dicProcessResources = processPlugin.getFhirResources()
+				.get(new ProcessIdAndVersion(ConstantsTutorial.PROCESS_NAME_FULL_DIC, definition.getResourceVersion()));
 
 		int numExpectedResources = 2;
 
-		if (draftTaskExists(draftTaskFile))
-		{
+		if (draftTaskExists(draftTaskFile)) {
 			numExpectedResources = 3;
 			String errorDraftTask = "Process is missing Task resource with status 'draft'.";
 			assertEquals(errorDraftTask, 1, dicProcessResources.stream().filter(r -> r instanceof Task).count());
@@ -73,8 +68,7 @@ public class TutorialProcessPluginDefinitionTest
 		assertEquals(numExpectedResources, dicProcessResources.size());
 	}
 
-	private boolean draftTaskExists(String draftTaskFile)
-	{
+	private boolean draftTaskExists(String draftTaskFile) {
 		return Objects.nonNull(getClass().getClassLoader().getResourceAsStream(draftTaskFile));
 	}
 }

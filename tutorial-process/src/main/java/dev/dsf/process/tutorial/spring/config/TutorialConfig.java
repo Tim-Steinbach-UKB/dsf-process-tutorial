@@ -10,15 +10,13 @@ import dev.dsf.bpe.v1.ProcessPluginApi;
 import dev.dsf.process.tutorial.service.DicTask;
 
 @Configuration
-public class TutorialConfig
-{
+public class TutorialConfig {
 	@Autowired
 	private ProcessPluginApi api;
 
 	@Bean
 	@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-	public DicTask dicTask()
-	{
+	public DicTask dicTask() {
 		return new DicTask(api);
 	}
 
