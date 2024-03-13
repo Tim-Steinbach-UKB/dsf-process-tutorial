@@ -17,6 +17,6 @@ public class DicTask extends AbstractServiceDelegate {
 
 	@Override
 	protected void doExecute(DelegateExecution execution, Variables variables) {
-		LOGGER.info(variables.getStartTask().getRestriction().getRecipientFirstRep().getIdentifier().getId());
+		LOGGER.info("Hello Dic from organization '{}'",variables.getStartTask().getRestriction().getRecipientFirstRep().getIdentifier().getId());
 	}
 }

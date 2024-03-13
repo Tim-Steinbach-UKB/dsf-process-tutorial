@@ -1,41 +1,38 @@
 <Task xmlns="http://hl7.org/fhir">
-	<meta>
-		<profile
-			value="http://ukbonn.de/fhir/StructureDefinition/task-exercise-1|1.0" />
-	</meta>
-	<identifier>
-     <system value="http://dsf.dev/sid/task-identifier" />
-     <value value="http://dsf.dev/bpe/Process/processKey/#{version}/task-start-dic-process-name" />
-	</identifier>
-	<instantiatesUri value="http://ukbonn.de/bpe/Process/task-exercise-1/1.0" />
-	<status value="draft" />
-	<intent value="order" />
-	<authoredOn value="2024-03-12T15:00:00+02:00" />
-	<requester>
-		<type value="Organization" />
-		<identifier>
-			<system value="http://highmed.org/sid/organization-identifier" />
-			<value value="#{organisation}" />
-			<!-- <value value="Test_DIC" /> -->
-		</identifier>
-	</requester>
-	<restriction>
-		<recipient>
-			<type value="Organization" />
-			<identifier>
-				<system value="http://highmed.org/sid/organization-identifier" />
-				<value value="#{organisation}" />
-				<!-- <value value="Test_DIC" /> -->
-			</identifier>
-		</recipient>
-	</restriction>
-	<input>
-		<type>
-			<coding>
-				<system value="http://highmed.org/fhir/CodeSystem/bpmn-message" />
-				<code value="message-name" />
-			</coding>
-		</type>
-		<valueString value="startDicProcess" />
-	</input>
+    <meta>
+        <profile value="http://dsf.dev/fhir/StructureDefinition/task-start-dic-process|#{version}"/>
+    </meta>
+    <identifier>
+        <system value="http://dsf.dev/sid/task-identifier" />
+        <value value="http://dsf.dev/bpe/Process/dicProcess/#{version}/task-start-dic-process" />
+    </identifier>
+    <instantiatesCanonical value="http://dsf.dev/bpe/Process/dicProcess|#{version}" />
+    <status value="draft"/>
+    <intent value="order"/>
+    <authoredOn value="#{date}" />
+    <requester>
+        <type value="Organization"/>
+        <identifier>
+            <system value="http://dsf.dev/sid/organization-identifier"/>
+            <value value="#{organization}" />
+        </identifier>
+    </requester>
+    <restriction>
+        <recipient>
+            <type value="Organization"/>
+            <identifier>
+                <system value="http://dsf.dev/sid/organization-identifier" />
+                <value value="#{organization}" />
+            </identifier>
+        </recipient>
+    </restriction>
+    <input>
+        <type>
+            <coding>
+                <system value="http://dsf.dev/fhir/CodeSystem/bpmn-message" />
+                <code value="message-name" />
+            </coding>
+        </type>
+        <valueString value="startDicProcess"/>
+    </input>
 </Task>
