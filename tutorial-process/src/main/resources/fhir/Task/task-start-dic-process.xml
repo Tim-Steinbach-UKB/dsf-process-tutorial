@@ -1,17 +1,21 @@
 <Task xmlns="http://hl7.org/fhir">
 	<meta>
 		<profile
-			value="http://ukbonn.de/fhir/StructureDefinition/task-exercise-1|0.0.1" />
+			value="http://ukbonn.de/fhir/StructureDefinition/task-exercise-1|1.0" />
 	</meta>
-	<instantiatesUri value="http://ukbonn.de/bpe/Process/task-exercise-1/0.0.1" />
-	<status value="requested" />
+	<identifier>
+     <system value="http://dsf.dev/sid/task-identifier" />
+     <value value="http://dsf.dev/bpe/Process/processKey/#{version}/task-start-dic-process-name" />
+	</identifier>
+	<instantiatesUri value="http://ukbonn.de/bpe/Process/task-exercise-1/1.0" />
+	<status value="draft" />
 	<intent value="order" />
 	<authoredOn value="2024-03-12T15:00:00+02:00" />
 	<requester>
 		<type value="Organization" />
 		<identifier>
 			<system value="http://highmed.org/sid/organization-identifier" />
-			<value value="ukbonn.de" />
+			<value value="#{organisation}" />
 		</identifier>
 	</requester>
 	<restriction>
@@ -19,7 +23,7 @@
 			<type value="Organization" />
 			<identifier>
 				<system value="http://highmed.org/sid/organization-identifier" />
-				<value value="ukbonn.de" />
+				<value value="#{organisation}" />
 			</identifier>
 		</recipient>
 	</restriction>
@@ -30,6 +34,6 @@
 				<code value="message-name" />
 			</coding>
 		</type>
-		<valueString value="starTaskExercise-1" />
+		<valueString value="startDicProcess" />
 	</input>
 </Task>

@@ -3,6 +3,10 @@
 		<profile
 			value="http://ukbonn.de/fhir/StructureDefinition/task-exercise-1|1.0" />
 	</meta>
+	<identifier>
+     <system value="http://dsf.dev/sid/task-identifier" />
+     <value value="http://dsf.dev/bpe/Process/processKey/#{version}/task-start-dic-process-name" />
+	</identifier>
 	<instantiatesUri value="http://ukbonn.de/bpe/Process/task-exercise-1/1.0" />
 	<status value="requested" />
 	<intent value="order" />
@@ -11,7 +15,7 @@
 		<type value="Organization" />
 		<identifier>
 			<system value="http://highmed.org/sid/organization-identifier" />
-			<value value="ukbonn.de" />
+			<value value="#{organisation}" />
 		</identifier>
 	</requester>
 	<restriction>
@@ -19,7 +23,7 @@
 			<type value="Organization" />
 			<identifier>
 				<system value="http://highmed.org/sid/organization-identifier" />
-				<value value="ukbonn.de" />
+				<value value="#{organisation}" />
 			</identifier>
 		</recipient>
 	</restriction>
